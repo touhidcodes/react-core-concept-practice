@@ -18,26 +18,37 @@ function App() {
           Learn React
         </a>
         <p>This is my first React App</p>
-        <Component></Component>
-        <Component></Component>
-        <Component></Component>
+        <Persons
+          name="Sakib Al Hassan"
+          salary="350000"
+          profession="Cricketer"
+        ></Persons>
+        <Persons
+          name="Enayet Chowdhury"
+          salary="30000"
+          profession="Teacher"
+        ></Persons>
+        <Persons
+          name="Jhankar Mahbub"
+          salary="500000"
+          profession="Programmer"
+        ></Persons>
       </header>
     </div>
   );
 }
 
-function Component() {
-  const componentStyle = {
+function Persons(props) {
+  const style = {
     border: "2px solid yellow",
-    margin: "5px",
-  };
-  const color = {
-    color: "red",
+    margin: "10px",
+    width: "500px",
   };
   return (
-    <div style={componentStyle}>
-      <h3>Component</h3>
-      <p style={color}>Learn React App Component</p>
+    <div style={style}>
+      <p>Name: {props.name}</p>
+      <p>Salary: {props.salary}</p>
+      <p>Profession: {props.profession}</p>
     </div>
   );
 }
