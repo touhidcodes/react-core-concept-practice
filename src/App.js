@@ -2,6 +2,11 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  const productDetails = [
+    { name: "Photoshop", price: "89.99$" },
+    { name: "Illustrator", price: "60.99$" },
+    { name: "Acrobat", price: "12.67$" },
+  ];
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +23,7 @@ function App() {
           Learn React
         </a>
         <p>This is my first React App</p>
+        <Products product={productDetails[0]}></Products>
         <Persons
           name="Sakib Al Hassan"
           salary="350000"
@@ -49,6 +55,16 @@ function Persons(props) {
       <p>Name: {props.name}</p>
       <p>Salary: {props.salary}</p>
       <p>Profession: {props.profession}</p>
+    </div>
+  );
+}
+
+function Products(props) {
+  return (
+    <div>
+      <h2>{props.productDetails.name}</h2>
+      <h3>{props.productDetails.price}</h3>
+      <button>Buy now</button>
     </div>
   );
 }
