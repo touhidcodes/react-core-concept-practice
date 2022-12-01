@@ -24,6 +24,8 @@ function App() {
         </a>
         <p>This is my first React App</p>
         <Products product={productDetails[0]}></Products>
+        <Products product={productDetails[1]}></Products>
+        <Products product={productDetails[2]}></Products>
         <Persons
           name="Sakib Al Hassan"
           salary="350000"
@@ -60,10 +62,21 @@ function Persons(props) {
 }
 
 function Products(props) {
+  const productStyle = {
+    backgroundColor: "lightgrey",
+    color: "black",
+    border: "2px solid grey",
+    borderRadius: "5px",
+    margin: "10px",
+    float: "left",
+    height: "280px",
+    width: "350px",
+  };
   return (
-    <div>
-      <h2>{props.productDetails.name}</h2>
-      <h3>{props.productDetails.price}</h3>
+    <div style={productStyle}>
+      <h2>{props.product.name}</h2>
+      <h3>Price: {props.product.price}</h3>
+      <p>Lorem, ipsum dolor sit amet.</p>
       <button>Buy now</button>
     </div>
   );
