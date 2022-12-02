@@ -22,46 +22,13 @@ function App() {
         >
           Learn React
         </a>
+        <p>This is my first React App</p>
         <ul>
           {productDetails.map((product) => (
             <Products product={product}></Products>
           ))}
         </ul>
-        <p>This is my first React App</p>
-        <Products product={productDetails[0]}></Products>
-        <Products product={productDetails[1]}></Products>
-        <Products product={productDetails[2]}></Products>
-        <Persons
-          name="Sakib Al Hassan"
-          salary="350000"
-          profession="Cricketer"
-        ></Persons>
-        <Persons
-          name="Enayet Chowdhury"
-          salary="30000"
-          profession="Teacher"
-        ></Persons>
-        <Persons
-          name="Jhankar Mahbub"
-          salary="500000"
-          profession="Programmer"
-        ></Persons>
       </header>
-    </div>
-  );
-}
-
-function Persons(props) {
-  const style = {
-    border: "2px solid yellow",
-    margin: "10px",
-    width: "500px",
-  };
-  return (
-    <div style={style}>
-      <p>Name: {props.name}</p>
-      <p>Salary: {props.salary}</p>
-      <p>Profession: {props.profession}</p>
     </div>
   );
 }
