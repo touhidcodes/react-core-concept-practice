@@ -22,6 +22,11 @@ function App() {
         >
           Learn React
         </a>
+        <ul>
+          {productDetails.map((product) => (
+            <Products product={product}></Products>
+          ))}
+        </ul>
         <p>This is my first React App</p>
         <Products product={productDetails[0]}></Products>
         <Products product={productDetails[1]}></Products>
