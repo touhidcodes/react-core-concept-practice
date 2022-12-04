@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
   const productDetails = [
@@ -56,9 +57,10 @@ function Products(props) {
 }
 
 function Count() {
+  const [count, setCount] = useState(0);
   return (
     <div>
-      <p>count:</p>
+      <h3>Count:</h3>
     </div>
   );
 }
