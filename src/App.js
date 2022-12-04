@@ -58,14 +58,11 @@ function Products(props) {
 
 function Count() {
   const [count, setCount] = useState(0);
-  const btnHandler = () => {
-    const newCount = count + 1;
-    setCount(newCount);
-  };
   return (
     <div>
       <h3>Count:{count}</h3>
-      <button onClick={btnHandler}>Increase</button>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+      <button onClick={() => setCount(count - 1)}>Decrease</button>
     </div>
   );
 }
