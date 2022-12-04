@@ -23,6 +23,7 @@ function App() {
           Learn React
         </a>
         <p>This is my first React App</p>
+        <Count></Count>
         <ul>
           {productDetails.map((product) => (
             <Products product={product}></Products>
@@ -50,6 +51,14 @@ function Products(props) {
       <h3>Price: {props.product.price}</h3>
       <p>Lorem, ipsum dolor sit amet.</p>
       <button>Buy now</button>
+    </div>
+  );
+}
+
+function Count() {
+  return (
+    <div>
+      <p>count:</p>
     </div>
   );
 }
