@@ -64,7 +64,7 @@ function Count() {
   };
   return (
     <div>
-      <h3>Count:</h3>
+      <h3>Count:{count}</h3>
       <button onClick={btnHandler}>Increase</button>
     </div>
   );
