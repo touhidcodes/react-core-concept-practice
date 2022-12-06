@@ -63,9 +63,6 @@ function Count() {
       <h3>Count:{count}</h3>
       <button onClick={() => setCount(count + 1)}>Increase</button>
       <button onClick={() => setCount(count - 1)}>Decrease</button>
-      <h3>Count:{count}</h3>
-      <button onClick={() => setCount(count + 1)}>Increase</button>
-      <button onClick={() => setCount(count - 1)}>Decrease</button>
     </div>
   );
 }
